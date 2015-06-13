@@ -95,8 +95,13 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         switch complication.family {
             case CLKComplicationFamily.ModularLarge:
                 let dataPoint = self.dataPoints[0]
-                let tmpl = templateForDataPoint(dataPoint)
-            
+                let tmpl = CLKComplicationTemplateModularLargeStandardBody()
+                
+                tmpl.headerTextProvider = CLKSimpleTextProvider(text: "Amount Raised")
+                tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Raised $\(dataPoint.amountRaised)")
+                
+                print("asfsdf \(tmpl)")
+                
                 handler(tmpl)
             
             case CLKComplicationFamily.ModularSmall:

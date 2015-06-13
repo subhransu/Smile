@@ -744,6 +744,7 @@
 				D3FC21CF1B2CA70500B1ACC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3FC21D01B2CA70500B1ACC1 /* Build configuration list for PBXNativeTarget "SmileTests" */ = {
 			isa = XCConfigurationList;
@@ -752,6 +753,7 @@
 				D3FC21D21B2CA70500B1ACC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3FC21D31B2CA70500B1ACC1 /* Build configuration list for PBXNativeTarget "SmileUITests" */ = {
 			isa = XCConfigurationList;
@@ -760,6 +762,7 @@
 				D3FC21D51B2CA70500B1ACC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3FC21FB1B2CA74600B1ACC1 /* Build configuration list for PBXNativeTarget "SmileApp Extension" */ = {
 			isa = XCConfigurationList;
@@ -768,6 +771,7 @@
 				D3FC21FD1B2CA74600B1ACC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3FC21FF1B2CA74600B1ACC1 /* Build configuration list for PBXNativeTarget "SmileApp" */ = {
 			isa = XCConfigurationList;
@@ -776,6 +780,7 @@
 				D3FC22011B2CA74600B1ACC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
