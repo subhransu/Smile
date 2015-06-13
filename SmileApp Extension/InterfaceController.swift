@@ -11,21 +11,72 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here.
+  @IBOutlet var amountPicker: WKInterfacePicker!
+  @IBOutlet var donationLabel: WKInterfaceLabel!
+  @IBOutlet var donationMainGroup: WKInterfaceGroup!
+  @IBOutlet var donationConfirmationGroup: WKInterfaceGroup!
+  @IBOutlet var confirmationLabel: WKInterfaceLabel!
+  
+  var amountPickerArray : [WKPickerItem] = []
+  var donationAmountString : String = ""
+  
+  override func awakeWithContext(context: AnyObject?) {
+    super.awakeWithContext(context)
+    
+    let itemOne = WKPickerItem()
+    itemOne.title = "1"
+    amountPickerArray.append(itemOne)
+    
+    let itemTwo = WKPickerItem()
+    itemTwo.title = "5"
+    amountPickerArray += [itemTwo]
+    
+    let itemThree = WKPickerItem()
+    itemThree.title = "10"
+    amountPickerArray += [itemThree]
+    
+    let itemFour = WKPickerItem()
+    itemFour.title = "20"
+    amountPickerArray += [itemFour]
+    
+    self.amountPicker.setItems(amountPickerArray)
+  }
+  
+  override func willActivate() {
+    // This method is called when watch view controller is about to be visible to user
+    super.willActivate()
+  }
+  
+  override func didDeactivate() {
+    // This method is called when watch view controller is no longer visible
+    super.didDeactivate()
+  }
+  
+  @IBAction func pickerValueChanged(value: Int) {
+      let donationAmount = amountPickerArray[value].title
+      donationAmountString = donationAmount!
+    
+      let donationText = "Donate: $\(donationAmount!)"
+      self.donationLabel.setText(donationText)
+  }
+  
+  @IBAction func homeBtnTapped() {
+    amountPicker.setSelectedItemIndex(0)
+    self.donationLabel.setText("Donate: $1")
+    
+    animateWithDuration(0.3) { () -> Void in
+      self.donationMainGroup.setHeight(180)
+      self.donationConfirmationGroup.setHeight(0)
     }
+  }
+  
+  @IBAction func donateBtnTapped() {
+    
+    self.confirmationLabel.setText("$\(donationAmountString)")
 
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+    animateWithDuration(0.3) { () -> Void in
+      self.donationMainGroup.setHeight(0)
+      self.donationConfirmationGroup.setHeight(180)
     }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
+  }
 }

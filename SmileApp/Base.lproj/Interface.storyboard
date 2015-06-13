@@ -1,21 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc" defaultGlanceController="0uZ-2p-rRc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Symbol.ttf">
+            <string>Symbol</string>
+            <string>Symbol</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SmileApp" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="155" alignment="left" layout="vertical" id="Agw-Ol-HgY">
+                            <items>
+                                <label width="136" alignment="left" text="Donate: $1" textAlignment="center" id="fk9-K5-NAl">
+                                    <color key="textColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <separator alignment="left" id="Q5t-6B-8LD">
+                                    <color key="color" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </separator>
+                                <picker width="1" height="76" alignment="left" id="lHm-QD-MWT">
+                                    <connections>
+                                        <action selector="pickerValueChanged:" destination="AgC-eL-Hgc" id="gLV-9c-m8Q"/>
+                                    </connections>
+                                </picker>
+                                <button width="1" alignment="left" title="Donate" id="bN6-NH-vCB">
+                                    <connections>
+                                        <action selector="donateBtnTapped" destination="AgC-eL-Hgc" id="duc-lu-Vh9"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <color key="backgroundColor" red="0.027450980390000001" green="0.28627450980000002" blue="0.54117647059999996" alpha="0.5" colorSpace="calibratedRGB"/>
+                        </group>
+                        <group width="1" height="2" alignment="left" layout="vertical" id="Kgj-zo-2e2">
+                            <items>
+                                <label width="136" height="30" alignment="left" text="Thank you for donating" textAlignment="center" numberOfLines="2" id="36X-Sc-6Sh">
+                                    <fontDescription key="font" name="Symbol" family="Symbol" pointSize="12"/>
+                                </label>
+                                <label width="136" height="31" alignment="left" text="$1" textAlignment="center" id="Bhx-Wp-x1f">
+                                    <fontDescription key="font" name="Symbol" family="Symbol" pointSize="40"/>
+                                </label>
+                                <label width="136" height="38" alignment="left" text="Check the watch-face for updates" textAlignment="center" numberOfLines="5" id="GAE-m8-6sO">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                                <button width="1" alignment="left" title="Home" id="tdr-hs-2kN">
+                                    <connections>
+                                        <action selector="homeBtnTapped" destination="AgC-eL-Hgc" id="pW9-yj-xVp"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <color key="backgroundColor" red="0.16078431369999999" green="0.56470588239999997" blue="0.50588235290000005" alpha="0.5" colorSpace="calibratedRGB"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="amountPicker" destination="lHm-QD-MWT" id="Opa-vy-wEJ"/>
+                        <outlet property="confirmationLabel" destination="Bhx-Wp-x1f" id="fyV-Op-uD3"/>
+                        <outlet property="donationConfirmationGroup" destination="Kgj-zo-2e2" id="1Bs-0g-Ynl"/>
+                        <outlet property="donationLabel" destination="fk9-K5-NAl" id="FY7-aP-DOG"/>
+                        <outlet property="donationMainGroup" destination="Agw-Ol-HgY" id="WP5-XL-SD0"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModuleProvider="target">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="SmileApp" customModuleProvider="target">
                     <items>
                         <group alignment="left" id="t8f-Gd-c4y"/>
                         <group alignment="left" id="uCw-4Q-Ouw"/>
@@ -44,7 +100,7 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="SmileApp" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>
