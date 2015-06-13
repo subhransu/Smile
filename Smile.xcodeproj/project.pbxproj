@@ -23,9 +23,9 @@
 		D3FC21F41B2CA74600B1ACC1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21F31B2CA74600B1ACC1 /* ComplicationController.swift */; };
 		D3FC21F61B2CA74600B1ACC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21F51B2CA74600B1ACC1 /* Assets.xcassets */; };
 		D3FC21FA1B2CA74600B1ACC1 /* SmileApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D3FC21D81B2CA74600B1ACC1 /* SmileApp.app */; };
-		D3FC22041B2CD1E800B1ACC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC22031B2CD1E800B1ACC1 /* Assets.xcassets */; };
 		D3FC22061B2CD83A00B1ACC1 /* PeopleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC22051B2CD83A00B1ACC1 /* PeopleInterfaceController.swift */; };
 		D3FC22081B2CE33900B1ACC1 /* PeopleRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC22071B2CE33900B1ACC1 /* PeopleRowController.swift */; };
+		D3FC220A1B2CF20F00B1ACC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC22091B2CF20F00B1ACC1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,9 +110,9 @@
 		D3FC21F31B2CA74600B1ACC1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		D3FC21F51B2CA74600B1ACC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3FC21F71B2CA74600B1ACC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3FC22031B2CD1E800B1ACC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		D3FC22051B2CD83A00B1ACC1 /* PeopleInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleInterfaceController.swift; sourceTree = "<group>"; };
 		D3FC22071B2CE33900B1ACC1 /* PeopleRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleRowController.swift; sourceTree = "<group>"; };
+		D3FC22091B2CF20F00B1ACC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +205,7 @@
 		D3FC21D91B2CA74600B1ACC1 /* SmileApp */ = {
 			isa = PBXGroup;
 			children = (
-				D3FC22031B2CD1E800B1ACC1 /* Assets.xcassets */,
+				D3FC22091B2CF20F00B1ACC1 /* Assets.xcassets */,
 				D3FC21DA1B2CA74600B1ACC1 /* Interface.storyboard */,
 				D3FC21DF1B2CA74600B1ACC1 /* Info.plist */,
 			);
@@ -408,7 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3FC22041B2CD1E800B1ACC1 /* Assets.xcassets in Resources */,
+				D3FC220A1B2CF20F00B1ACC1 /* Assets.xcassets in Resources */,
 				D3FC21DC1B2CA74600B1ACC1 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

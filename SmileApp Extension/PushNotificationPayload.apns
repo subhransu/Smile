@@ -1,7 +1,7 @@
 {
     "aps": {
         "alert": {
-            "body": "Test message",
+            "body": "Add a Smile",
             "title": "Optional title"
         },
         "category": "myCategory"
@@ -9,8 +9,12 @@
     
     "WatchKit Simulator Actions": [
         {
-            "title": "First Button",
+            "title": "Donate $5",
             "identifier": "firstButtonAction"
+        },
+        {
+            "title": "Custom Amount",
+            "identifier": "secondButtonAction"
         }
     ],
     
