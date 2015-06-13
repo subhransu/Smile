@@ -99,9 +99,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
                 
                 tmpl.headerTextProvider = CLKSimpleTextProvider(text: "Amount Raised")
                 tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Raised $\(dataPoint.amountRaised)")
-                
-                print("asfsdf \(tmpl)")
-                
+                                
                 handler(tmpl)
             
             case CLKComplicationFamily.ModularSmall:
