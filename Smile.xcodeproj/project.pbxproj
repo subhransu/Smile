@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3FC21A91B2CA70500B1ACC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21A81B2CA70500B1ACC1 /* AppDelegate.swift */; };
+		D3FC21AB1B2CA70500B1ACC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21AA1B2CA70500B1ACC1 /* ViewController.swift */; };
+		D3FC21AE1B2CA70500B1ACC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21AC1B2CA70500B1ACC1 /* Main.storyboard */; };
+		D3FC21B01B2CA70500B1ACC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21AF1B2CA70500B1ACC1 /* Assets.xcassets */; };
+		D3FC21B31B2CA70500B1ACC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21B11B2CA70500B1ACC1 /* LaunchScreen.storyboard */; };
+		D3FC21BE1B2CA70500B1ACC1 /* SmileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21BD1B2CA70500B1ACC1 /* SmileTests.swift */; };
+		D3FC21C91B2CA70500B1ACC1 /* SmileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21C81B2CA70500B1ACC1 /* SmileUITests.swift */; };
+		D3FC21DC1B2CA74600B1ACC1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21DA1B2CA74600B1ACC1 /* Interface.storyboard */; };
+		D3FC21DE1B2CA74600B1ACC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21DD1B2CA74600B1ACC1 /* Assets.xcassets */; };
+		D3FC21E51B2CA74600B1ACC1 /* SmileApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3FC21E41B2CA74600B1ACC1 /* SmileApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3FC21EC1B2CA74600B1ACC1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21EB1B2CA74600B1ACC1 /* InterfaceController.swift */; };
+		D3FC21EE1B2CA74600B1ACC1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21ED1B2CA74600B1ACC1 /* ExtensionDelegate.swift */; };
+		D3FC21F01B2CA74600B1ACC1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21EF1B2CA74600B1ACC1 /* NotificationController.swift */; };
+		D3FC21F21B2CA74600B1ACC1 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21F11B2CA74600B1ACC1 /* GlanceController.swift */; };
+		D3FC21F41B2CA74600B1ACC1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21F31B2CA74600B1ACC1 /* ComplicationController.swift */; };
+		D3FC21F61B2CA74600B1ACC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21F51B2CA74600B1ACC1 /* Assets.xcassets */; };
+		D3FC21FA1B2CA74600B1ACC1 /* SmileApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D3FC21D81B2CA74600B1ACC1 /* SmileApp.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3FC21BA1B2CA70500B1ACC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3FC219D1B2CA70500B1ACC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3FC21A41B2CA70500B1ACC1;
+			remoteInfo = Smile;
+		};
+		D3FC21C51B2CA70500B1ACC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3FC219D1B2CA70500B1ACC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3FC21A41B2CA70500B1ACC1;
+			remoteInfo = Smile;
+		};
+		D3FC21E61B2CA74600B1ACC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3FC219D1B2CA70500B1ACC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3FC21E31B2CA74600B1ACC1;
+			remoteInfo = "SmileApp Extension";
+		};
+		D3FC21F81B2CA74600B1ACC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3FC219D1B2CA70500B1ACC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3FC21D71B2CA74600B1ACC1;
+			remoteInfo = SmileApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D3FC21FE1B2CA74600B1ACC1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D3FC21E51B2CA74600B1ACC1 /* SmileApp Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC22021B2CA74600B1ACC1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D3FC21FA1B2CA74600B1ACC1 /* SmileApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D3FC21A51B2CA70500B1ACC1 /* Smile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FC21A81B2CA70500B1ACC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3FC21AA1B2CA70500B1ACC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3FC21AD1B2CA70500B1ACC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3FC21AF1B2CA70500B1ACC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3FC21B21B2CA70500B1ACC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3FC21B41B2CA70500B1ACC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FC21B91B2CA70500B1ACC1 /* SmileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FC21BD1B2CA70500B1ACC1 /* SmileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileTests.swift; sourceTree = "<group>"; };
+		D3FC21BF1B2CA70500B1ACC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FC21C41B2CA70500B1ACC1 /* SmileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FC21C81B2CA70500B1ACC1 /* SmileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileUITests.swift; sourceTree = "<group>"; };
+		D3FC21CA1B2CA70500B1ACC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FC21D81B2CA74600B1ACC1 /* SmileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FC21DB1B2CA74600B1ACC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D3FC21DD1B2CA74600B1ACC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3FC21DF1B2CA74600B1ACC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FC21E41B2CA74600B1ACC1 /* SmileApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmileApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FC21EA1B2CA74600B1ACC1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D3FC21EB1B2CA74600B1ACC1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D3FC21ED1B2CA74600B1ACC1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D3FC21EF1B2CA74600B1ACC1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D3FC21F11B2CA74600B1ACC1 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		D3FC21F31B2CA74600B1ACC1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		D3FC21F51B2CA74600B1ACC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3FC21F71B2CA74600B1ACC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3FC21A21B2CA70500B1ACC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC21B61B2CA70500B1ACC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC21C11B2CA70500B1ACC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC21E11B2CA74600B1ACC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3FC219C1B2CA70500B1ACC1 = {
+			isa = PBXGroup;
+			children = (
+				D3FC21A71B2CA70500B1ACC1 /* Smile */,
+				D3FC21BC1B2CA70500B1ACC1 /* SmileTests */,
+				D3FC21C71B2CA70500B1ACC1 /* SmileUITests */,
+				D3FC21D91B2CA74600B1ACC1 /* SmileApp */,
+				D3FC21E81B2CA74600B1ACC1 /* SmileApp Extension */,
+				D3FC21A61B2CA70500B1ACC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3FC21A61B2CA70500B1ACC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC21A51B2CA70500B1ACC1 /* Smile.app */,
+				D3FC21B91B2CA70500B1ACC1 /* SmileTests.xctest */,
+				D3FC21C41B2CA70500B1ACC1 /* SmileUITests.xctest */,
+				D3FC21D81B2CA74600B1ACC1 /* SmileApp.app */,
+				D3FC21E41B2CA74600B1ACC1 /* SmileApp Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3FC21A71B2CA70500B1ACC1 /* Smile */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC21A81B2CA70500B1ACC1 /* AppDelegate.swift */,
+				D3FC21AA1B2CA70500B1ACC1 /* ViewController.swift */,
+				D3FC21AC1B2CA70500B1ACC1 /* Main.storyboard */,
+				D3FC21AF1B2CA70500B1ACC1 /* Assets.xcassets */,
+				D3FC21B11B2CA70500B1ACC1 /* LaunchScreen.storyboard */,
+				D3FC21B41B2CA70500B1ACC1 /* Info.plist */,
+			);
+			path = Smile;
+			sourceTree = "<group>";
+		};
+		D3FC21BC1B2CA70500B1ACC1 /* SmileTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC21BD1B2CA70500B1ACC1 /* SmileTests.swift */,
+				D3FC21BF1B2CA70500B1ACC1 /* Info.plist */,
+			);
+			path = SmileTests;
+			sourceTree = "<group>";
+		};
+		D3FC21C71B2CA70500B1ACC1 /* SmileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC21C81B2CA70500B1ACC1 /* SmileUITests.swift */,
+				D3FC21CA1B2CA70500B1ACC1 /* Info.plist */,
+			);
+			path = SmileUITests;
+			sourceTree = "<group>";
+		};
+		D3FC21D91B2CA74600B1ACC1 /* SmileApp */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC21DA1B2CA74600B1ACC1 /* Interface.storyboard */,
+				D3FC21DD1B2CA74600B1ACC1 /* Assets.xcassets */,
+				D3FC21DF1B2CA74600B1ACC1 /* Info.plist */,
+			);
+			path = SmileApp;
+			sourceTree = "<group>";
+		};
+		D3FC21E81B2CA74600B1ACC1 /* SmileApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC21EB1B2CA74600B1ACC1 /* InterfaceController.swift */,
+				D3FC21ED1B2CA74600B1ACC1 /* ExtensionDelegate.swift */,
+				D3FC21EF1B2CA74600B1ACC1 /* NotificationController.swift */,
+				D3FC21F11B2CA74600B1ACC1 /* GlanceController.swift */,
+				D3FC21F31B2CA74600B1ACC1 /* ComplicationController.swift */,
+				D3FC21F51B2CA74600B1ACC1 /* Assets.xcassets */,
+				D3FC21F71B2CA74600B1ACC1 /* Info.plist */,
+				D3FC21E91B2CA74600B1ACC1 /* Supporting Files */,
+			);
+			path = "SmileApp Extension";
+			sourceTree = "<group>";
+		};
+		D3FC21E91B2CA74600B1ACC1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC21EA1B2CA74600B1ACC1 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3FC21A41B2CA70500B1ACC1 /* Smile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FC21CD1B2CA70500B1ACC1 /* Build configuration list for PBXNativeTarget "Smile" */;
+			buildPhases = (
+				D3FC21A11B2CA70500B1ACC1 /* Sources */,
+				D3FC21A21B2CA70500B1ACC1 /* Frameworks */,
+				D3FC21A31B2CA70500B1ACC1 /* Resources */,
+				D3FC22021B2CA74600B1ACC1 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3FC21F91B2CA74600B1ACC1 /* PBXTargetDependency */,
+			);
+			name = Smile;
+			productName = Smile;
+			productReference = D3FC21A51B2CA70500B1ACC1 /* Smile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3FC21B81B2CA70500B1ACC1 /* SmileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FC21D01B2CA70500B1ACC1 /* Build configuration list for PBXNativeTarget "SmileTests" */;
+			buildPhases = (
+				D3FC21B51B2CA70500B1ACC1 /* Sources */,
+				D3FC21B61B2CA70500B1ACC1 /* Frameworks */,
+				D3FC21B71B2CA70500B1ACC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3FC21BB1B2CA70500B1ACC1 /* PBXTargetDependency */,
+			);
+			name = SmileTests;
+			productName = SmileTests;
+			productReference = D3FC21B91B2CA70500B1ACC1 /* SmileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3FC21C31B2CA70500B1ACC1 /* SmileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FC21D31B2CA70500B1ACC1 /* Build configuration list for PBXNativeTarget "SmileUITests" */;
+			buildPhases = (
+				D3FC21C01B2CA70500B1ACC1 /* Sources */,
+				D3FC21C11B2CA70500B1ACC1 /* Frameworks */,
+				D3FC21C21B2CA70500B1ACC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3FC21C61B2CA70500B1ACC1 /* PBXTargetDependency */,
+			);
+			name = SmileUITests;
+			productName = SmileUITests;
+			productReference = D3FC21C41B2CA70500B1ACC1 /* SmileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D3FC21D71B2CA74600B1ACC1 /* SmileApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FC21FF1B2CA74600B1ACC1 /* Build configuration list for PBXNativeTarget "SmileApp" */;
+			buildPhases = (
+				D3FC21D61B2CA74600B1ACC1 /* Resources */,
+				D3FC21FE1B2CA74600B1ACC1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3FC21E71B2CA74600B1ACC1 /* PBXTargetDependency */,
+			);
+			name = SmileApp;
+			productName = SmileApp;
+			productReference = D3FC21D81B2CA74600B1ACC1 /* SmileApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D3FC21E31B2CA74600B1ACC1 /* SmileApp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FC21FB1B2CA74600B1ACC1 /* Build configuration list for PBXNativeTarget "SmileApp Extension" */;
+			buildPhases = (
+				D3FC21E01B2CA74600B1ACC1 /* Sources */,
+				D3FC21E11B2CA74600B1ACC1 /* Frameworks */,
+				D3FC21E21B2CA74600B1ACC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmileApp Extension";
+			productName = "SmileApp Extension";
+			productReference = D3FC21E41B2CA74600B1ACC1 /* SmileApp Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3FC219D1B2CA70500B1ACC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = subhb.org;
+				TargetAttributes = {
+					D3FC21A41B2CA70500B1ACC1 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					D3FC21B81B2CA70500B1ACC1 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = D3FC21A41B2CA70500B1ACC1;
+					};
+					D3FC21C31B2CA70500B1ACC1 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = D3FC21A41B2CA70500B1ACC1;
+					};
+					D3FC21D71B2CA74600B1ACC1 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					D3FC21E31B2CA74600B1ACC1 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = D3FC21A01B2CA70500B1ACC1 /* Build configuration list for PBXProject "Smile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3FC219C1B2CA70500B1ACC1;
+			productRefGroup = D3FC21A61B2CA70500B1ACC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3FC21A41B2CA70500B1ACC1 /* Smile */,
+				D3FC21B81B2CA70500B1ACC1 /* SmileTests */,
+				D3FC21C31B2CA70500B1ACC1 /* SmileUITests */,
+				D3FC21D71B2CA74600B1ACC1 /* SmileApp */,
+				D3FC21E31B2CA74600B1ACC1 /* SmileApp Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3FC21A31B2CA70500B1ACC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FC21B31B2CA70500B1ACC1 /* LaunchScreen.storyboard in Resources */,
+				D3FC21B01B2CA70500B1ACC1 /* Assets.xcassets in Resources */,
+				D3FC21AE1B2CA70500B1ACC1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC21B71B2CA70500B1ACC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC21C21B2CA70500B1ACC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC21D61B2CA74600B1ACC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FC21DE1B2CA74600B1ACC1 /* Assets.xcassets in Resources */,
+				D3FC21DC1B2CA74600B1ACC1 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC21E21B2CA74600B1ACC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FC21F61B2CA74600B1ACC1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3FC21A11B2CA70500B1ACC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FC21AB1B2CA70500B1ACC1 /* ViewController.swift in Sources */,
+				D3FC21A91B2CA70500B1ACC1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC21B51B2CA70500B1ACC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FC21BE1B2CA70500B1ACC1 /* SmileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC21C01B2CA70500B1ACC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FC21C91B2CA70500B1ACC1 /* SmileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC21E01B2CA74600B1ACC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FC21F01B2CA74600B1ACC1 /* NotificationController.swift in Sources */,
+				D3FC21EE1B2CA74600B1ACC1 /* ExtensionDelegate.swift in Sources */,
+				D3FC21F41B2CA74600B1ACC1 /* ComplicationController.swift in Sources */,
+				D3FC21EC1B2CA74600B1ACC1 /* InterfaceController.swift in Sources */,
+				D3FC21F21B2CA74600B1ACC1 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3FC21BB1B2CA70500B1ACC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3FC21A41B2CA70500B1ACC1 /* Smile */;
+			targetProxy = D3FC21BA1B2CA70500B1ACC1 /* PBXContainerItemProxy */;
+		};
+		D3FC21C61B2CA70500B1ACC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3FC21A41B2CA70500B1ACC1 /* Smile */;
+			targetProxy = D3FC21C51B2CA70500B1ACC1 /* PBXContainerItemProxy */;
+		};
+		D3FC21E71B2CA74600B1ACC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3FC21E31B2CA74600B1ACC1 /* SmileApp Extension */;
+			targetProxy = D3FC21E61B2CA74600B1ACC1 /* PBXContainerItemProxy */;
+		};
+		D3FC21F91B2CA74600B1ACC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3FC21D71B2CA74600B1ACC1 /* SmileApp */;
+			targetProxy = D3FC21F81B2CA74600B1ACC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3FC21AC1B2CA70500B1ACC1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3FC21AD1B2CA70500B1ACC1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D3FC21B11B2CA70500B1ACC1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3FC21B21B2CA70500B1ACC1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D3FC21DA1B2CA74600B1ACC1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3FC21DB1B2CA74600B1ACC1 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3FC21CB1B2CA70500B1ACC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3FC21CC1B2CA70500B1ACC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3FC21CE1B2CA70500B1ACC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Smile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.Smile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D3FC21CF1B2CA70500B1ACC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Smile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.Smile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D3FC21D11B2CA70500B1ACC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SmileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.SmileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smile.app/Smile";
+			};
+			name = Debug;
+		};
+		D3FC21D21B2CA70500B1ACC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SmileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.SmileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smile.app/Smile";
+			};
+			name = Release;
+		};
+		D3FC21D41B2CA70500B1ACC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SmileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.SmileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Smile;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D3FC21D51B2CA70500B1ACC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SmileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.SmileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Smile;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		D3FC21FC1B2CA74600B1ACC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "SmileApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.Smile.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		D3FC21FD1B2CA74600B1ACC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "SmileApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.Smile.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		D3FC22001B2CA74600B1ACC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = SmileApp_Extension;
+				INFOPLIST_FILE = SmileApp/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.Smile.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		D3FC22011B2CA74600B1ACC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = SmileApp_Extension;
+				INFOPLIST_FILE = SmileApp/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.Smile.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3FC21A01B2CA70500B1ACC1 /* Build configuration list for PBXProject "Smile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FC21CB1B2CA70500B1ACC1 /* Debug */,
+				D3FC21CC1B2CA70500B1ACC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FC21CD1B2CA70500B1ACC1 /* Build configuration list for PBXNativeTarget "Smile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FC21CE1B2CA70500B1ACC1 /* Debug */,
+				D3FC21CF1B2CA70500B1ACC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D3FC21D01B2CA70500B1ACC1 /* Build configuration list for PBXNativeTarget "SmileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FC21D11B2CA70500B1ACC1 /* Debug */,
+				D3FC21D21B2CA70500B1ACC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D3FC21D31B2CA70500B1ACC1 /* Build configuration list for PBXNativeTarget "SmileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FC21D41B2CA70500B1ACC1 /* Debug */,
+				D3FC21D51B2CA70500B1ACC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D3FC21FB1B2CA74600B1ACC1 /* Build configuration list for PBXNativeTarget "SmileApp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FC21FC1B2CA74600B1ACC1 /* Debug */,
+				D3FC21FD1B2CA74600B1ACC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D3FC21FF1B2CA74600B1ACC1 /* Build configuration list for PBXNativeTarget "SmileApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FC22001B2CA74600B1ACC1 /* Debug */,
+				D3FC22011B2CA74600B1ACC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3FC219D1B2CA70500B1ACC1 /* Project object */;
+}
