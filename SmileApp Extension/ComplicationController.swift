@@ -17,9 +17,10 @@ struct DataPoint {
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
     let dataPoints = [
-        DataPoint(date: NSDate(), amountRaised: 300.0),
-        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60), amountRaised: 200.0),
-        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 24), amountRaised: 100.0),
+        DataPoint(date: NSDate(), amountRaised: 340.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60), amountRaised: 290.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 1), amountRaised: 280.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 24), amountRaised: 130.0),
         DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 24 * 2), amountRaised: 50.0),
     ]
     
@@ -93,10 +94,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         
         switch complication.family {
             case CLKComplicationFamily.ModularLarge:
-                let tmpl = CLKComplicationTemplateModularLargeStandardBody()
-            
-                tmpl.headerTextProvider = CLKSimpleTextProvider(text: "Stores Nearby")
-                tmpl.body1TextProvider = CLKSimpleTextProvider(text: "There are 20 stores nearby")
+                let dataPoint = self.dataPoints[0]
+                let tmpl = templateForDataPoint(dataPoint)
             
                 handler(tmpl)
             
