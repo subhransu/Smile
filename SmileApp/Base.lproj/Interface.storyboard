@@ -8,6 +8,8 @@
         <mutableArray key="Symbol.ttf">
             <string>Symbol</string>
             <string>Symbol</string>
+            <string>Symbol</string>
+            <string>Symbol</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -16,14 +18,44 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SmileApp" customModuleProvider="target">
                     <items>
-                        <group width="1" height="155" alignment="left" layout="vertical" id="Agw-Ol-HgY">
+                        <group width="1" height="180" alignment="left" layout="vertical" id="ztS-Q6-HW9">
                             <items>
-                                <label width="136" alignment="left" text="Donate: $1" textAlignment="center" id="fk9-K5-NAl">
-                                    <color key="textColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <group width="1" height="53" alignment="left" id="nwf-VR-6FF">
+                                    <items>
+                                        <imageView width="50" height="50" alignment="center" image="patient_1" id="ANS-M9-oB8"/>
+                                    </items>
+                                </group>
+                                <separator alignment="left" id="2gW-ny-Xgb"/>
+                                <label width="136" height="60" alignment="left" text="We need $5000 for Lora's surgery next week. She's in SF Children Hospital." textAlignment="justified" numberOfLines="4" id="NsH-zn-308">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" name="Symbol" family="Symbol" pointSize="12"/>
                                 </label>
-                                <separator alignment="left" id="Q5t-6B-8LD">
-                                    <color key="color" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </separator>
+                                <group width="1" alignment="left" id="KHv-ZP-cua">
+                                    <items>
+                                        <button width="0.5" alignment="left" title="Donate" id="pBF-8C-34J">
+                                            <connections>
+                                                <action selector="firstDonateBtnTapped" destination="AgC-eL-Hgc" id="c6u-NA-CkM"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.5" alignment="left" title="Smiles" id="kO3-Wa-wE8">
+                                            <fontDescription key="font" type="system" pointSize="15"/>
+                                            <connections>
+                                                <segue destination="nP2-E7-uV2" kind="push" id="8jV-ZH-jAn"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" red="1" green="0.48153324906460626" blue="0.43240831669183422" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                        <group width="1" height="2" alignment="left" layout="vertical" id="Agw-Ol-HgY">
+                            <items>
+                                <group width="1" height="20" alignment="left" id="HpV-qQ-zx7">
+                                    <items>
+                                        <label width="136" alignment="left" text="Donate: $1" textAlignment="center" id="Fz8-7T-EqI"/>
+                                    </items>
+                                    <color key="backgroundColor" red="0.74901960779999999" green="0.08235294118" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </group>
                                 <picker width="1" height="76" alignment="left" id="lHm-QD-MWT">
                                     <connections>
                                         <action selector="pickerValueChanged:" destination="AgC-eL-Hgc" id="gLV-9c-m8Q"/>
@@ -61,12 +93,113 @@
                         <outlet property="amountPicker" destination="lHm-QD-MWT" id="Opa-vy-wEJ"/>
                         <outlet property="confirmationLabel" destination="Bhx-Wp-x1f" id="fyV-Op-uD3"/>
                         <outlet property="donationConfirmationGroup" destination="Kgj-zo-2e2" id="1Bs-0g-Ynl"/>
-                        <outlet property="donationLabel" destination="fk9-K5-NAl" id="FY7-aP-DOG"/>
+                        <outlet property="donationLabel" destination="Fz8-7T-EqI" id="Om8-bd-etZ"/>
                         <outlet property="donationMainGroup" destination="Agw-Ol-HgY" id="WP5-XL-SD0"/>
+                        <outlet property="infoGroup" destination="ztS-Q6-HW9" id="Q9s-6B-MXD"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="195" y="344"/>
+        </scene>
+        <!--Smiles-->
+        <scene sceneID="O6g-Es-rbK">
+            <objects>
+                <controller title="Smiles" hidesWhenLoading="NO" id="nP2-E7-uV2" customClass="PeopleInterfaceController" customModule="SmileApp_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="HNv-tZ-COZ">
+                            <items>
+                                <group width="1" height="170" alignment="left" layout="vertical" id="e0T-Dj-n8t">
+                                    <items>
+                                        <group width="1" height="15" alignment="left" id="r51-Vk-Bcv">
+                                            <items>
+                                                <label width="135" height="22" alignment="left" text="You created 4 Smiles" textAlignment="center" id="9gy-hi-F15">
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="font" name="Symbol" family="Symbol" pointSize="12"/>
+                                                </label>
+                                            </items>
+                                            <color key="backgroundColor" red="0.74901960779999999" green="0.08235294118" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </group>
+                                        <group width="1" height="40" alignment="left" id="KmK-5z-FSV">
+                                            <items>
+                                                <imageView width="40" height="40" alignment="left" hidden="YES" image="patient_1" id="rLB-js-rge">
+                                                    <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <imageView width="40" height="40" alignment="right" hidden="YES" image="patient_2" id="KBf-GK-bet">
+                                                    <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                            </items>
+                                        </group>
+                                        <group width="1" height="40" alignment="left" id="vu4-s5-hC3">
+                                            <items>
+                                                <imageView width="40" height="40" alignment="center" hidden="YES" image="patient_3" id="KaY-PW-77Q">
+                                                    <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                            </items>
+                                        </group>
+                                        <group width="1" height="40" alignment="left" id="hDY-JP-p5G">
+                                            <items>
+                                                <imageView width="40" height="40" alignment="left" hidden="YES" image="patient_4" id="T0f-AO-cAF">
+                                                    <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                            </items>
+                                        </group>
+                                    </items>
+                                    <color key="backgroundColor" red="0.027450980390000001" green="0.28627450980000002" blue="0.54117647059999996" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </group>
+                                <group width="1" height="2" alignment="left" id="qIB-qd-WIk">
+                                    <items>
+                                        <table alignment="left" id="bze-F3-aq2">
+                                            <items>
+                                                <tableRow identifier="PeopleRowType" id="0KH-lZ-5Ee" customClass="PeopleRowController" customModule="SmileApp_Extension">
+                                                    <group key="rootItem" width="1" alignment="left" id="YB2-pt-t2t">
+                                                        <items>
+                                                            <imageView width="40" height="40" alignment="left" image="patient_1" id="wB8-4U-50s"/>
+                                                            <group width="80" alignment="left" layout="vertical" id="xjZ-Pr-70M">
+                                                                <items>
+                                                                    <label width="78" height="0.5" heightAdjustment="-2" alignment="left" text="Lora Brown" id="Hxa-kn-tyk">
+                                                                        <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                                                    </label>
+                                                                    <label width="88" alignment="left" text="01/20/2015" id="IIR-QR-9Cx">
+                                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                                    </label>
+                                                                </items>
+                                                            </group>
+                                                        </items>
+                                                    </group>
+                                                    <connections>
+                                                        <outlet property="dateLabel" destination="IIR-QR-9Cx" id="cVr-GN-97g"/>
+                                                        <outlet property="peopleThumb" destination="wB8-4U-50s" id="y2x-44-AT5"/>
+                                                        <outlet property="peopleTitleLabel" destination="Hxa-kn-tyk" id="kcr-6d-9ZD"/>
+                                                    </connections>
+                                                </tableRow>
+                                            </items>
+                                        </table>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="L6Z-et-tMT">
+                        <items>
+                            <menuItem title="Change View" icon="shuffle" id="EAy-sn-4F7">
+                                <connections>
+                                    <action selector="shuffleBtnTapped" destination="nP2-E7-uV2" id="Zjv-yj-kR8"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="peopleGridGroup" destination="e0T-Dj-n8t" id="Lhb-Le-sjY"/>
+                        <outlet property="peopleTable" destination="bze-F3-aq2" id="U98-Ac-A5C"/>
+                        <outlet property="peopleTableGroup" destination="qIB-qd-WIk" id="qNF-HJ-LxA"/>
+                        <outlet property="personFourImage" destination="T0f-AO-cAF" id="gSD-YF-6Nz"/>
+                        <outlet property="personOneImg" destination="rLB-js-rge" id="K5q-fz-qa3"/>
+                        <outlet property="personThreeImage" destination="KaY-PW-77Q" id="6gk-pR-XBn"/>
+                        <outlet property="personTwoImage" destination="KBf-GK-bet" id="Zh9-Je-nFT"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="469" y="343"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

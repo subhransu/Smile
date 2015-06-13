@@ -15,7 +15,6 @@
 		D3FC21BE1B2CA70500B1ACC1 /* SmileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21BD1B2CA70500B1ACC1 /* SmileTests.swift */; };
 		D3FC21C91B2CA70500B1ACC1 /* SmileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21C81B2CA70500B1ACC1 /* SmileUITests.swift */; };
 		D3FC21DC1B2CA74600B1ACC1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21DA1B2CA74600B1ACC1 /* Interface.storyboard */; };
-		D3FC21DE1B2CA74600B1ACC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21DD1B2CA74600B1ACC1 /* Assets.xcassets */; };
 		D3FC21E51B2CA74600B1ACC1 /* SmileApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3FC21E41B2CA74600B1ACC1 /* SmileApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D3FC21EC1B2CA74600B1ACC1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21EB1B2CA74600B1ACC1 /* InterfaceController.swift */; };
 		D3FC21EE1B2CA74600B1ACC1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21ED1B2CA74600B1ACC1 /* ExtensionDelegate.swift */; };
@@ -24,6 +23,9 @@
 		D3FC21F41B2CA74600B1ACC1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21F31B2CA74600B1ACC1 /* ComplicationController.swift */; };
 		D3FC21F61B2CA74600B1ACC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21F51B2CA74600B1ACC1 /* Assets.xcassets */; };
 		D3FC21FA1B2CA74600B1ACC1 /* SmileApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D3FC21D81B2CA74600B1ACC1 /* SmileApp.app */; };
+		D3FC22041B2CD1E800B1ACC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC22031B2CD1E800B1ACC1 /* Assets.xcassets */; };
+		D3FC22061B2CD83A00B1ACC1 /* PeopleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC22051B2CD83A00B1ACC1 /* PeopleInterfaceController.swift */; };
+		D3FC22081B2CE33900B1ACC1 /* PeopleRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC22071B2CE33900B1ACC1 /* PeopleRowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +100,6 @@
 		D3FC21CA1B2CA70500B1ACC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3FC21D81B2CA74600B1ACC1 /* SmileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FC21DB1B2CA74600B1ACC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		D3FC21DD1B2CA74600B1ACC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3FC21DF1B2CA74600B1ACC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3FC21E41B2CA74600B1ACC1 /* SmileApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmileApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FC21EA1B2CA74600B1ACC1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -109,6 +110,9 @@
 		D3FC21F31B2CA74600B1ACC1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		D3FC21F51B2CA74600B1ACC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3FC21F71B2CA74600B1ACC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FC22031B2CD1E800B1ACC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		D3FC22051B2CD83A00B1ACC1 /* PeopleInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleInterfaceController.swift; sourceTree = "<group>"; };
+		D3FC22071B2CE33900B1ACC1 /* PeopleRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleRowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +205,8 @@
 		D3FC21D91B2CA74600B1ACC1 /* SmileApp */ = {
 			isa = PBXGroup;
 			children = (
+				D3FC22031B2CD1E800B1ACC1 /* Assets.xcassets */,
 				D3FC21DA1B2CA74600B1ACC1 /* Interface.storyboard */,
-				D3FC21DD1B2CA74600B1ACC1 /* Assets.xcassets */,
 				D3FC21DF1B2CA74600B1ACC1 /* Info.plist */,
 			);
 			path = SmileApp;
@@ -211,6 +215,8 @@
 		D3FC21E81B2CA74600B1ACC1 /* SmileApp Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D3FC22051B2CD83A00B1ACC1 /* PeopleInterfaceController.swift */,
+				D3FC22071B2CE33900B1ACC1 /* PeopleRowController.swift */,
 				D3FC21EB1B2CA74600B1ACC1 /* InterfaceController.swift */,
 				D3FC21ED1B2CA74600B1ACC1 /* ExtensionDelegate.swift */,
 				D3FC21EF1B2CA74600B1ACC1 /* NotificationController.swift */,
@@ -402,7 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3FC21DE1B2CA74600B1ACC1 /* Assets.xcassets in Resources */,
+				D3FC22041B2CD1E800B1ACC1 /* Assets.xcassets in Resources */,
 				D3FC21DC1B2CA74600B1ACC1 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,8 +455,10 @@
 			files = (
 				D3FC21F01B2CA74600B1ACC1 /* NotificationController.swift in Sources */,
 				D3FC21EE1B2CA74600B1ACC1 /* ExtensionDelegate.swift in Sources */,
+				D3FC22081B2CE33900B1ACC1 /* PeopleRowController.swift in Sources */,
 				D3FC21F41B2CA74600B1ACC1 /* ComplicationController.swift in Sources */,
 				D3FC21EC1B2CA74600B1ACC1 /* InterfaceController.swift in Sources */,
+				D3FC22061B2CD83A00B1ACC1 /* PeopleInterfaceController.swift in Sources */,
 				D3FC21F21B2CA74600B1ACC1 /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,6 +752,7 @@
 				D3FC21CF1B2CA70500B1ACC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3FC21D01B2CA70500B1ACC1 /* Build configuration list for PBXNativeTarget "SmileTests" */ = {
 			isa = XCConfigurationList;
@@ -752,6 +761,7 @@
 				D3FC21D21B2CA70500B1ACC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3FC21D31B2CA70500B1ACC1 /* Build configuration list for PBXNativeTarget "SmileUITests" */ = {
 			isa = XCConfigurationList;
@@ -760,6 +770,7 @@
 				D3FC21D51B2CA70500B1ACC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3FC21FB1B2CA74600B1ACC1 /* Build configuration list for PBXNativeTarget "SmileApp Extension" */ = {
 			isa = XCConfigurationList;
@@ -768,6 +779,7 @@
 				D3FC21FD1B2CA74600B1ACC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3FC21FF1B2CA74600B1ACC1 /* Build configuration list for PBXNativeTarget "SmileApp" */ = {
 			isa = XCConfigurationList;
@@ -776,6 +788,7 @@
 				D3FC22011B2CA74600B1ACC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

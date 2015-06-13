@@ -16,6 +16,7 @@ class InterfaceController: WKInterfaceController {
   @IBOutlet var donationMainGroup: WKInterfaceGroup!
   @IBOutlet var donationConfirmationGroup: WKInterfaceGroup!
   @IBOutlet var confirmationLabel: WKInterfaceLabel!
+  @IBOutlet var infoGroup: WKInterfaceGroup!
   
   var amountPickerArray : [WKPickerItem] = []
   var donationAmountString : String = ""
@@ -40,11 +41,18 @@ class InterfaceController: WKInterfaceController {
     amountPickerArray += [itemFour]
     
     self.amountPicker.setItems(amountPickerArray)
+    
+    amountPicker.setSelectedItemIndex(0)
+    self.donationLabel.setText("Donate: $1")
+    
+    self.donationMainGroup.setHeight(0)
+    self.donationConfirmationGroup.setHeight(0)
   }
   
   override func willActivate() {
     // This method is called when watch view controller is about to be visible to user
     super.willActivate()
+    
   }
   
   override func didDeactivate() {
@@ -65,6 +73,15 @@ class InterfaceController: WKInterfaceController {
     self.donationLabel.setText("Donate: $1")
     
     animateWithDuration(0.3) { () -> Void in
+      self.infoGroup.setHeight(180)
+      self.donationMainGroup.setHeight(0)
+      self.donationConfirmationGroup.setHeight(0)
+    }
+  }
+  
+  @IBAction func firstDonateBtnTapped() {
+    animateWithDuration(0.3) { () -> Void in
+      self.infoGroup.setHeight(0)
       self.donationMainGroup.setHeight(180)
       self.donationConfirmationGroup.setHeight(0)
     }
@@ -75,6 +92,7 @@ class InterfaceController: WKInterfaceController {
     self.confirmationLabel.setText("$\(donationAmountString)")
 
     animateWithDuration(0.3) { () -> Void in
+      self.infoGroup.setHeight(0)
       self.donationMainGroup.setHeight(0)
       self.donationConfirmationGroup.setHeight(180)
     }
