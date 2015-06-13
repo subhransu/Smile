@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0394B9A91B2CF69C00810CB8 /* patient_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A41B2CF69C00810CB8 /* patient_1.png */; };
+		0394B9AA1B2CF69C00810CB8 /* patient_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A41B2CF69C00810CB8 /* patient_1.png */; };
+		0394B9AB1B2CF69C00810CB8 /* patient_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A41B2CF69C00810CB8 /* patient_1.png */; };
+		0394B9AC1B2CF69C00810CB8 /* patient_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A51B2CF69C00810CB8 /* patient_2.png */; };
+		0394B9AD1B2CF69C00810CB8 /* patient_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A51B2CF69C00810CB8 /* patient_2.png */; };
+		0394B9AE1B2CF69C00810CB8 /* patient_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A51B2CF69C00810CB8 /* patient_2.png */; };
+		0394B9AF1B2CF69C00810CB8 /* patient_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A61B2CF69C00810CB8 /* patient_3.png */; };
+		0394B9B01B2CF69C00810CB8 /* patient_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A61B2CF69C00810CB8 /* patient_3.png */; };
+		0394B9B11B2CF69C00810CB8 /* patient_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A61B2CF69C00810CB8 /* patient_3.png */; };
+		0394B9B21B2CF69C00810CB8 /* patient_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A71B2CF69C00810CB8 /* patient_4.png */; };
+		0394B9B31B2CF69C00810CB8 /* patient_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A71B2CF69C00810CB8 /* patient_4.png */; };
+		0394B9B41B2CF69C00810CB8 /* patient_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A71B2CF69C00810CB8 /* patient_4.png */; };
+		0394B9B51B2CF69C00810CB8 /* patient_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A81B2CF69C00810CB8 /* patient_5.png */; };
+		0394B9B61B2CF69C00810CB8 /* patient_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A81B2CF69C00810CB8 /* patient_5.png */; };
+		0394B9B71B2CF69C00810CB8 /* patient_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0394B9A81B2CF69C00810CB8 /* patient_5.png */; };
 		D3FC21A91B2CA70500B1ACC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21A81B2CA70500B1ACC1 /* AppDelegate.swift */; };
 		D3FC21AB1B2CA70500B1ACC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC21AA1B2CA70500B1ACC1 /* ViewController.swift */; };
 		D3FC21AE1B2CA70500B1ACC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FC21AC1B2CA70500B1ACC1 /* Main.storyboard */; };
@@ -85,6 +100,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03467D791B2CF2BF00251C33 /* SmileApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmileApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		0394B9A41B2CF69C00810CB8 /* patient_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = patient_1.png; sourceTree = "<group>"; };
+		0394B9A51B2CF69C00810CB8 /* patient_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = patient_2.png; sourceTree = "<group>"; };
+		0394B9A61B2CF69C00810CB8 /* patient_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = patient_3.png; sourceTree = "<group>"; };
+		0394B9A71B2CF69C00810CB8 /* patient_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = patient_4.png; sourceTree = "<group>"; };
+		0394B9A81B2CF69C00810CB8 /* patient_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = patient_5.png; sourceTree = "<group>"; };
 		D3FC21A51B2CA70500B1ACC1 /* Smile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FC21A81B2CA70500B1ACC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3FC21AA1B2CA70500B1ACC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +168,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0394B9A31B2CF68C00810CB8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0394B9A41B2CF69C00810CB8 /* patient_1.png */,
+				0394B9A51B2CF69C00810CB8 /* patient_2.png */,
+				0394B9A61B2CF69C00810CB8 /* patient_3.png */,
+				0394B9A71B2CF69C00810CB8 /* patient_4.png */,
+				0394B9A81B2CF69C00810CB8 /* patient_5.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		D3FC219C1B2CA70500B1ACC1 = {
 			isa = PBXGroup;
 			children = (
@@ -174,12 +207,14 @@
 		D3FC21A71B2CA70500B1ACC1 /* Smile */ = {
 			isa = PBXGroup;
 			children = (
+				0394B9A31B2CF68C00810CB8 /* Assets */,
 				D3FC21A81B2CA70500B1ACC1 /* AppDelegate.swift */,
 				D3FC21AA1B2CA70500B1ACC1 /* ViewController.swift */,
 				D3FC21AC1B2CA70500B1ACC1 /* Main.storyboard */,
 				D3FC21AF1B2CA70500B1ACC1 /* Assets.xcassets */,
 				D3FC21B11B2CA70500B1ACC1 /* LaunchScreen.storyboard */,
 				D3FC21B41B2CA70500B1ACC1 /* Info.plist */,
+				03467D791B2CF2BF00251C33 /* SmileApp-Bridging-Header.h */,
 			);
 			path = Smile;
 			sourceTree = "<group>";
@@ -335,6 +370,7 @@
 		D3FC219D1B2CA70500B1ACC1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = subhb.org;
 				TargetAttributes = {
@@ -385,6 +421,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3FC21B31B2CA70500B1ACC1 /* LaunchScreen.storyboard in Resources */,
+				0394B9B51B2CF69C00810CB8 /* patient_5.png in Resources */,
+				0394B9AC1B2CF69C00810CB8 /* patient_2.png in Resources */,
+				0394B9B21B2CF69C00810CB8 /* patient_4.png in Resources */,
+				0394B9A91B2CF69C00810CB8 /* patient_1.png in Resources */,
+				0394B9AF1B2CF69C00810CB8 /* patient_3.png in Resources */,
 				D3FC21B01B2CA70500B1ACC1 /* Assets.xcassets in Resources */,
 				D3FC21AE1B2CA70500B1ACC1 /* Main.storyboard in Resources */,
 			);
@@ -408,8 +449,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0394B9B31B2CF69C00810CB8 /* patient_4.png in Resources */,
+				0394B9B61B2CF69C00810CB8 /* patient_5.png in Resources */,
+				0394B9AA1B2CF69C00810CB8 /* patient_1.png in Resources */,
 				D3FC220A1B2CF20F00B1ACC1 /* Assets.xcassets in Resources */,
+				0394B9AD1B2CF69C00810CB8 /* patient_2.png in Resources */,
 				D3FC21DC1B2CA74600B1ACC1 /* Interface.storyboard in Resources */,
+				0394B9B01B2CF69C00810CB8 /* patient_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +463,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0394B9AE1B2CF69C00810CB8 /* patient_2.png in Resources */,
 				D3FC21F61B2CA74600B1ACC1 /* Assets.xcassets in Resources */,
+				0394B9B41B2CF69C00810CB8 /* patient_4.png in Resources */,
+				0394B9B71B2CF69C00810CB8 /* patient_5.png in Resources */,
+				0394B9AB1B2CF69C00810CB8 /* patient_1.png in Resources */,
+				0394B9B11B2CF69C00810CB8 /* patient_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,14 +754,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = SmileApp_Extension;
 				INFOPLIST_FILE = SmileApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.Smile.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Smile/SmileApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -720,14 +775,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = SmileApp_Extension;
 				INFOPLIST_FILE = SmileApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.subhb.Smile.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Smile/SmileApp-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
