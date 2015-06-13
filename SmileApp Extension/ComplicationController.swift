@@ -19,7 +19,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     let dataPoints = [
         DataPoint(date: NSDate(), amountRaised: 340.0),
         DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60), amountRaised: 290.0),
-        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 1), amountRaised: 280.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 2), amountRaised: 280.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 3), amountRaised: 270.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 4), amountRaised: 230.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 5), amountRaised: 220.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 6), amountRaised: 200.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 7), amountRaised: 190.0),
         DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 24), amountRaised: 130.0),
         DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 24 * 2), amountRaised: 50.0),
     ]
@@ -56,8 +61,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         for dataPoint in self.dataPoints {
             let thisDate = dataPoint.date
             if date.compare(thisDate) == .OrderedDescending {
-                let tmpl = templateForDataPoint(dataPoint)
-                let entry = CLKComplicationTimelineEntry(date:thisDate, complicationTemplate:tmpl)
+                let tmpl = templateForDataPoint(dataPoint, complication: complication)
+                let entry = CLKComplicationTimelineEntry(date:thisDate, complicationTemplate:tmpl!)
                 entries.append(entry)
                 if entries.count == limit { break }
             }
@@ -71,8 +76,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         for dataPoint in self.dataPoints {
             let thisDate = dataPoint.date
             if date.compare(thisDate) == .OrderedAscending {
-                let tmpl = templateForDataPoint(dataPoint)
-                let entry = CLKComplicationTimelineEntry(date:thisDate, complicationTemplate:tmpl)
+                let tmpl = templateForDataPoint(dataPoint, complication: complication)
+                let entry = CLKComplicationTimelineEntry(date:thisDate, complicationTemplate:tmpl!)
                 entries.append(entry)
                 if entries.count == limit { break }
             }
@@ -91,34 +96,50 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Placeholder Templates
     
     func getPlaceholderTemplateForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTemplate?) -> Void) {
-        
+        let dataPoint = self.dataPoints[0]
+        let tmpl = templateForDataPoint(dataPoint, complication: complication)
+        handler(tmpl)
+    }
+    
+    func templateForDataPoint(dataPoint: DataPoint, complication: CLKComplication) -> CLKComplicationTemplate? {
         switch complication.family {
             case CLKComplicationFamily.ModularLarge:
-                let dataPoint = self.dataPoints[0]
                 let tmpl = CLKComplicationTemplateModularLargeStandardBody()
                 
                 tmpl.headerTextProvider = CLKSimpleTextProvider(text: "Amount Raised")
                 tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Raised $\(dataPoint.amountRaised)")
-                                
-                handler(tmpl)
+                
+                return tmpl
             
             case CLKComplicationFamily.ModularSmall:
                 let tmpl = CLKComplicationTemplateModularSmallSimpleText()
-                tmpl.textProvider = CLKSimpleTextProvider(text: "Some Text")
-            
-                handler(tmpl)
-            
-            default:
-                handler(nil)
-        }
-    }
-    
-    func templateForDataPoint(dataPoint: DataPoint) -> CLKComplicationTemplate {
-        let tmpl = CLKComplicationTemplateModularLargeStandardBody()
+                let myIntValue:Int = Int(dataPoint.amountRaised)
+                tmpl.textProvider = CLKSimpleTextProvider(text: "$\(myIntValue)")
         
-        tmpl.headerTextProvider = CLKSimpleTextProvider(text: "Amount Raised")
-        tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Raised $\(dataPoint.amountRaised)")
-        return tmpl
+                
+                return tmpl
+
+            case CLKComplicationFamily.CircularSmall:
+                let tmpl = CLKComplicationTemplateCircularSmallRingText()
+                let myIntValue:Int = Int(dataPoint.amountRaised)
+                tmpl.textProvider = CLKSimpleTextProvider(text: "$\(myIntValue)")
+                
+                return tmpl
+            
+            case CLKComplicationFamily.UtilitarianSmall:
+                let tmpl = CLKComplicationTemplateUtilitarianSmallRingText()
+                let myIntValue:Int = Int(dataPoint.amountRaised)
+                tmpl.textProvider = CLKSimpleTextProvider(text: "$\(myIntValue)")
+            
+                return tmpl
+            
+            case CLKComplicationFamily.UtilitarianLarge:
+                let tmpl = CLKComplicationTemplateUtilitarianLargeFlat()
+                
+                tmpl.textProvider = CLKSimpleTextProvider(text: "Raised $\(dataPoint.amountRaised)")
+                
+                return tmpl
+        }
     }
     
 }
