@@ -9,7 +9,19 @@
 import ClockKit
 
 
+struct DataPoint {
+    var date: NSDate;
+    var amountRaised: Double = 0.0;
+}
+
 class ComplicationController: NSObject, CLKComplicationDataSource {
+    
+    let dataPoints = [
+        DataPoint(date: NSDate(), amountRaised: 300.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60), amountRaised: 200.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 24), amountRaised: 100.0),
+        DataPoint(date: NSDate().dateByAddingTimeInterval(-60 * 60 * 24 * 2), amountRaised: 50.0),
+    ]
     
     // MARK: - Timeline Configuration
     
@@ -18,11 +30,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     func getTimelineStartDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
-        handler(nil)
+        let lastDataPoint = self.dataPoints.last
+        handler(lastDataPoint?.date)
     }
     
     func getTimelineEndDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
-        handler(nil)
+        handler(self.dataPoints[0].date)
     }
     
     func getPrivacyBehaviorForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationPrivacyBehavior) -> Void) {
@@ -32,18 +45,39 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Timeline Population
     
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
-        // Call the handler with the current timeline entry
-        handler(nil)
+        getTimelineEntriesForComplication(complication, beforeDate: NSDate(), limit: 1) { (entries) -> Void in
+            handler(entries?.first)
+        }
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, beforeDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
-        // Call the handler with the timeline entries prior to the given date
-        handler(nil)
+        var entries = [CLKComplicationTimelineEntry]()
+        for dataPoint in self.dataPoints {
+            let thisDate = dataPoint.date
+            if date.compare(thisDate) == .OrderedDescending {
+                let tmpl = templateForDataPoint(dataPoint)
+                let entry = CLKComplicationTimelineEntry(date:thisDate, complicationTemplate:tmpl)
+                entries.append(entry)
+                if entries.count == limit { break }
+            }
+        }
+        
+        handler(entries)
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, afterDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
-        // Call the handler with the timeline entries after to the given date
-        handler(nil)
+        var entries = [CLKComplicationTimelineEntry]()
+        for dataPoint in self.dataPoints {
+            let thisDate = dataPoint.date
+            if date.compare(thisDate) == .OrderedAscending {
+                let tmpl = templateForDataPoint(dataPoint)
+                let entry = CLKComplicationTimelineEntry(date:thisDate, complicationTemplate:tmpl)
+                entries.append(entry)
+                if entries.count == limit { break }
+            }
+        }
+        
+        handler(entries)
     }
     
     // MARK: - Update Scheduling
@@ -56,8 +90,33 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Placeholder Templates
     
     func getPlaceholderTemplateForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTemplate?) -> Void) {
-        // This method will be called once per supported complication, and the results will be cached
-        handler(nil)
+        
+        switch complication.family {
+            case CLKComplicationFamily.ModularLarge:
+                let tmpl = CLKComplicationTemplateModularLargeStandardBody()
+            
+                tmpl.headerTextProvider = CLKSimpleTextProvider(text: "Stores Nearby")
+                tmpl.body1TextProvider = CLKSimpleTextProvider(text: "There are 20 stores nearby")
+            
+                handler(tmpl)
+            
+            case CLKComplicationFamily.ModularSmall:
+                let tmpl = CLKComplicationTemplateModularSmallSimpleText()
+                tmpl.textProvider = CLKSimpleTextProvider(text: "Some Text")
+            
+                handler(tmpl)
+            
+            default:
+                handler(nil)
+        }
+    }
+    
+    func templateForDataPoint(dataPoint: DataPoint) -> CLKComplicationTemplate {
+        let tmpl = CLKComplicationTemplateModularLargeStandardBody()
+        
+        tmpl.headerTextProvider = CLKSimpleTextProvider(text: "Amount Raised")
+        tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Raised $\(dataPoint.amountRaised)")
+        return tmpl
     }
     
 }
