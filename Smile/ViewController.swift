@@ -18,11 +18,11 @@ struct Charity {
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
   let charities = [
-    Charity(name: "Charity One", cause: "test", imageName: "patient_1.png"),
-    Charity(name: "Charity Two", cause: "test", imageName: "patient_2.png"),
-    Charity(name: "Charity Three", cause: "test", imageName: "patient_3.png"),
-    Charity(name: "Charity Four", cause: "test", imageName: "patient_4.png"),
-    Charity(name: "Charity Five",cause: "test", imageName: "patient_5.png")
+    Charity(name: "Oxfam", cause: "Farming", imageName: "patient_1.png"),
+    Charity(name: "Heiffer Foundation", cause: "Building houses", imageName: "patient_2.png"),
+    Charity(name: "Red Cross", cause: "Relief", imageName: "patient_3.png"),
+    Charity(name: "Heal Initiative", cause: "Medical", imageName: "patient_4.png"),
+    Charity(name: "Bill and Melinda Gates Foundation",cause: "General", imageName: "patient_5.png")
   ]
     
   @IBOutlet weak var tableView: UITableView!
@@ -50,6 +50,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableViewCell.textLabel!.text = charity.name
         tableViewCell.imageView!.image = UIImage(named: charity.imageName)
         tableViewCell.detailTextLabel?.text = charity.cause
+        tableViewCell.selectionStyle = UITableViewCellSelectionStyle.None
         return tableViewCell
     }
     
